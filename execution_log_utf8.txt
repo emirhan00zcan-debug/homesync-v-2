@@ -1,0 +1,1090 @@
+﻿Total statements to run: 204
+node : Statement 29 fai
+led:
+At line:1 char:1
++ node execute_schema.j
+s > execution_log.txt 2
+>&1
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (Statement 29    
+ failed::String) []    
+, RemoteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT usta_re
+views_usta_id_fkey FORE
+IGN KEY ("usta_...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"u
+sta_id\" referenced in 
+foreign key constraint 
+does not exist\nCONTEXT
+:  SQL statement \"ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT usta_re
+views_usta_id_fkey FORE
+IGN KEY (\"usta_id\") R
+EFERENCES public.profil
+es (\"id\")\"\nPL/pgSQL
+ function inline_code_b
+lock line 1 at SQL stat
+ement\n"}
+Statement 31 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT product
+s_vendor_id_fkey FOREIG
+N KEY ("vendor_...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"v
+endor_id\" referenced i
+n foreign key constrain
+t does not exist\nCONTE
+XT:  SQL statement \"AL
+TER TABLE public.profil
+es ADD CONSTRAINT produ
+cts_vendor_id_fkey FORE
+IGN KEY (\"vendor_id\")
+ REFERENCES public.prof
+iles (\"id\")\"\nPL/pgS
+QL function inline_code
+_block line 1 at SQL st
+atement\n"}
+Statement 32 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT order_i
+tems_vendor_id_fkey FOR
+EIGN KEY ("vend...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"v
+endor_id\" referenced i
+n foreign key constrain
+t does not exist\nCONTE
+XT:  SQL statement \"AL
+TER TABLE public.profil
+es ADD CONSTRAINT order
+_items_vendor_id_fkey F
+OREIGN KEY (\"vendor_id
+\") REFERENCES public.p
+rofiles (\"id\")\"\nPL/
+pgSQL function inline_c
+ode_block line 1 at SQL
+ statement\n"}
+Statement 33 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT vendor_
+commissions_vendor_id_f
+key FOREIGN KEY...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"v
+endor_id\" referenced i
+n foreign key constrain
+t does not exist\nCONTE
+XT:  SQL statement \"AL
+TER TABLE public.profil
+es ADD CONSTRAINT vendo
+r_commissions_vendor_id
+_fkey FOREIGN KEY (\"ve
+ndor_id\") REFERENCES p
+ublic.profiles (\"id\")
+\"\nPL/pgSQL function i
+nline_code_block line 1
+ at SQL statement\n"}
+Statement 34 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT vendor_
+commissions_changed_by_
+fkey FOREIGN KE...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"c
+hanged_by\" referenced 
+in foreign key constrai
+nt does not exist\nCONT
+EXT:  SQL statement \"A
+LTER TABLE public.profi
+les ADD CONSTRAINT vend
+or_commissions_changed_
+by_fkey FOREIGN KEY (\"
+changed_by\") REFERENCE
+S public.profiles (\"id
+\")\"\nPL/pgSQL functio
+n inline_code_block lin
+e 1 at SQL statement\n"
+}
+Statement 36 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT technic
+ian_stats_usta_id_fkey 
+FOREIGN KEY ("u...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"u
+sta_id\" referenced in 
+foreign key constraint 
+does not exist\nCONTEXT
+:  SQL statement \"ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT technic
+ian_stats_usta_id_fkey 
+FOREIGN KEY (\"usta_id\
+") REFERENCES public.pr
+ofiles (\"id\")\"\nPL/p
+gSQL function inline_co
+de_block line 1 at SQL 
+statement\n"}
+Statement 37 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT stores_
+owner_id_fkey FOREIGN K
+EY ("owner_id")...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"o
+wner_id\" referenced in
+ foreign key constraint
+ does not exist\nCONTEX
+T:  SQL statement \"ALT
+ER TABLE public.profile
+s ADD CONSTRAINT stores
+_owner_id_fkey FOREIGN 
+KEY (\"owner_id\") REFE
+RENCES public.profiles 
+(\"id\")\"\nPL/pgSQL fu
+nction inline_code_bloc
+k line 1 at SQL stateme
+nt\n"}
+Statement 38 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT notific
+ations_recipient_id_fke
+y FOREIGN KEY (...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"r
+ecipient_id\" reference
+d in foreign key constr
+aint does not exist\nCO
+NTEXT:  SQL statement \
+"ALTER TABLE public.pro
+files ADD CONSTRAINT no
+tifications_recipient_i
+d_fkey FOREIGN KEY (\"r
+ecipient_id\") REFERENC
+ES public.profiles (\"i
+d\")\"\nPL/pgSQL functi
+on inline_code_block li
+ne 1 at SQL statement\n
+"}
+Statement 39 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT service
+_requests_usta_id_fkey 
+FOREIGN KEY ("u...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"u
+sta_id\" referenced in 
+foreign key constraint 
+does not exist\nCONTEXT
+:  SQL statement \"ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT service
+_requests_usta_id_fkey 
+FOREIGN KEY (\"usta_id\
+") REFERENCES public.pr
+ofiles (\"id\")\"\nPL/p
+gSQL function inline_co
+de_block line 1 at SQL 
+statement\n"}
+Statement 40 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT usta_av
+ailability_usta_id_fkey
+ FOREIGN KEY ("...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"u
+sta_id\" referenced in 
+foreign key constraint 
+does not exist\nCONTEXT
+:  SQL statement \"ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT usta_av
+ailability_usta_id_fkey
+ FOREIGN KEY (\"usta_id
+\") REFERENCES public.p
+rofiles (\"id\")\"\nPL/
+pgSQL function inline_c
+ode_block line 1 at SQL
+ statement\n"}
+Statement 41 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT usta_se
+rvice_areas_usta_id_fke
+y FOREIGN KEY (...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"u
+sta_id\" referenced in 
+foreign key constraint 
+does not exist\nCONTEXT
+:  SQL statement \"ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT usta_se
+rvice_areas_usta_id_fke
+y FOREIGN KEY (\"usta_i
+d\") REFERENCES public.
+profiles (\"id\")\"\nPL
+/pgSQL function inline_
+code_block line 1 at SQ
+L statement\n"}
+Statement 42 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT usta_se
+rvices_usta_id_fkey FOR
+EIGN KEY ("usta...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"u
+sta_id\" referenced in 
+foreign key constraint 
+does not exist\nCONTEXT
+:  SQL statement \"ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT usta_se
+rvices_usta_id_fkey FOR
+EIGN KEY (\"usta_id\") 
+REFERENCES public.profi
+les (\"id\")\"\nPL/pgSQ
+L function inline_code_
+block line 1 at SQL sta
+tement\n"}
+Statement 43 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT shippin
+g_vendor_id_fkey FOREIG
+N KEY ("vendor_...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"v
+endor_id\" referenced i
+n foreign key constrain
+t does not exist\nCONTE
+XT:  SQL statement \"AL
+TER TABLE public.profil
+es ADD CONSTRAINT shipp
+ing_vendor_id_fkey FORE
+IGN KEY (\"vendor_id\")
+ REFERENCES public.prof
+iles (\"id\")\"\nPL/pgS
+QL function inline_code
+_block line 1 at SQL st
+atement\n"}
+Statement 44 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT service
+s_usta_id_fkey FOREIGN 
+KEY ("usta_id")...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"u
+sta_id\" referenced in 
+foreign key constraint 
+does not exist\nCONTEXT
+:  SQL statement \"ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT service
+s_usta_id_fkey FOREIGN 
+KEY (\"usta_id\") REFER
+ENCES public.profiles (
+\"id\")\"\nPL/pgSQL fun
+ction inline_code_block
+ line 1 at SQL statemen
+t\n"}
+Statement 45 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT appoint
+ments_usta_id_fkey FORE
+IGN KEY ("usta_...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"u
+sta_id\" referenced in 
+foreign key constraint 
+does not exist\nCONTEXT
+:  SQL statement \"ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT appoint
+ments_usta_id_fkey FORE
+IGN KEY (\"usta_id\") R
+EFERENCES public.profil
+es (\"id\")\"\nPL/pgSQL
+ function inline_code_b
+lock line 1 at SQL stat
+ement\n"}
+Statement 46 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT appoint
+ments_customer_id_fkey 
+FOREIGN KEY ("c...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"c
+ustomer_id\" referenced
+ in foreign key constra
+int does not exist\nCON
+TEXT:  SQL statement \"
+ALTER TABLE public.prof
+iles ADD CONSTRAINT app
+ointments_customer_id_f
+key FOREIGN KEY (\"cust
+omer_id\") REFERENCES p
+ublic.profiles (\"id\")
+\"\nPL/pgSQL function i
+nline_code_block line 1
+ at SQL statement\n"}
+Statement 47 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT service
+_areas_usta_id_fkey FOR
+EIGN KEY ("usta...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"u
+sta_id\" referenced in 
+foreign key constraint 
+does not exist\nCONTEXT
+:  SQL statement \"ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT service
+_areas_usta_id_fkey FOR
+EIGN KEY (\"usta_id\") 
+REFERENCES public.profi
+les (\"id\")\"\nPL/pgSQ
+L function inline_code_
+block line 1 at SQL sta
+tement\n"}
+Statement 48 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT portfol
+ios_usta_id_fkey FOREIG
+N KEY ("usta_id...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"u
+sta_id\" referenced in 
+foreign key constraint 
+does not exist\nCONTEXT
+:  SQL statement \"ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT portfol
+ios_usta_id_fkey FOREIG
+N KEY (\"usta_id\") REF
+ERENCES public.profiles
+ (\"id\")\"\nPL/pgSQL f
+unction inline_code_blo
+ck line 1 at SQL statem
+ent\n"}
+Statement 49 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT verific
+ation_logs_user_id_fkey
+ FOREIGN KEY ("...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"u
+ser_id\" referenced in 
+foreign key constraint 
+does not exist\nCONTEXT
+:  SQL statement \"ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT verific
+ation_logs_user_id_fkey
+ FOREIGN KEY (\"user_id
+\") REFERENCES public.p
+rofiles (\"id\")\"\nPL/
+pgSQL function inline_c
+ode_block line 1 at SQL
+ statement\n"}
+Statement 50 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT verific
+ation_logs_changed_by_f
+key FOREIGN KEY...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"c
+hanged_by\" referenced 
+in foreign key constrai
+nt does not exist\nCONT
+EXT:  SQL statement \"A
+LTER TABLE public.profi
+les ADD CONSTRAINT veri
+fication_logs_changed_b
+y_fkey FOREIGN KEY (\"c
+hanged_by\") REFERENCES
+ public.profiles (\"id\
+")\"\nPL/pgSQL function
+ inline_code_block line
+ 1 at SQL statement\n"}
+Statement 51 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT service
+_offers_usta_id_fkey FO
+REIGN KEY ("ust...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"u
+sta_id\" referenced in 
+foreign key constraint 
+does not exist\nCONTEXT
+:  SQL statement \"ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT service
+_offers_usta_id_fkey FO
+REIGN KEY (\"usta_id\")
+ REFERENCES public.prof
+iles (\"id\")\"\nPL/pgS
+QL function inline_code
+_block line 1 at SQL st
+atement\n"}
+Statement 52 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT technic
+ian_documents_usta_id_f
+key FOREIGN KEY...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"u
+sta_id\" referenced in 
+foreign key constraint 
+does not exist\nCONTEXT
+:  SQL statement \"ALTE
+R TABLE public.profiles
+ ADD CONSTRAINT technic
+ian_documents_usta_id_f
+key FOREIGN KEY (\"usta
+_id\") REFERENCES publi
+c.profiles (\"id\")\"\n
+PL/pgSQL function inlin
+e_code_block line 1 at 
+SQL statement\n"}
+Statement 54 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.products
+ ADD CONSTRAINT favorit
+es_product_id_fkey FORE
+IGN KEY ("produ...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"p
+roduct_id\" referenced 
+in foreign key constrai
+nt does not exist\nCONT
+EXT:  SQL statement \"A
+LTER TABLE public.produ
+cts ADD CONSTRAINT favo
+rites_product_id_fkey F
+OREIGN KEY (\"product_i
+d\") REFERENCES public.
+products (\"id\")\"\nPL
+/pgSQL function inline_
+code_block line 1 at SQ
+L statement\n"}
+Statement 55 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.products
+ ADD CONSTRAINT reviews
+_product_id_fkey FOREIG
+N KEY ("product...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"p
+roduct_id\" referenced 
+in foreign key constrai
+nt does not exist\nCONT
+EXT:  SQL statement \"A
+LTER TABLE public.produ
+cts ADD CONSTRAINT revi
+ews_product_id_fkey FOR
+EIGN KEY (\"product_id\
+") REFERENCES public.pr
+oducts (\"id\")\"\nPL/p
+gSQL function inline_co
+de_block line 1 at SQL 
+statement\n"}
+Statement 57 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.products
+ ADD CONSTRAINT order_i
+tems_product_id_fkey FO
+REIGN KEY ("pro...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"p
+roduct_id\" referenced 
+in foreign key constrai
+nt does not exist\nCONT
+EXT:  SQL statement \"A
+LTER TABLE public.produ
+cts ADD CONSTRAINT orde
+r_items_product_id_fkey
+ FOREIGN KEY (\"product
+_id\") REFERENCES publi
+c.products (\"id\")\"\n
+PL/pgSQL function inlin
+e_code_block line 1 at 
+SQL statement\n"}
+Statement 59 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.orders A
+DD CONSTRAINT order_ite
+ms_order_id_fkey FOREIG
+N KEY ("order_i...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"o
+rder_id\" referenced in
+ foreign key constraint
+ does not exist\nCONTEX
+T:  SQL statement \"ALT
+ER TABLE public.orders 
+ADD CONSTRAINT order_it
+ems_order_id_fkey FOREI
+GN KEY (\"order_id\") R
+EFERENCES public.orders
+ (\"id\")\"\nPL/pgSQL f
+unction inline_code_blo
+ck line 1 at SQL statem
+ent\n"}
+Statement 61 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.orders A
+DD CONSTRAINT shipping_
+order_id_fkey FOREIGN K
+EY ("order_id")...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"o
+rder_id\" referenced in
+ foreign key constraint
+ does not exist\nCONTEX
+T:  SQL statement \"ALT
+ER TABLE public.orders 
+ADD CONSTRAINT shipping
+_order_id_fkey FOREIGN 
+KEY (\"order_id\") REFE
+RENCES public.orders (\
+"id\")\"\nPL/pgSQL func
+tion inline_code_block 
+line 1 at SQL statement
+\n"}
+Statement 68 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.stores A
+DD CONSTRAINT orders_st
+ore_id_fkey FOREIGN KEY
+ ("store_id") R...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"s
+tore_id\" referenced in
+ foreign key constraint
+ does not exist\nCONTEX
+T:  SQL statement \"ALT
+ER TABLE public.stores 
+ADD CONSTRAINT orders_s
+tore_id_fkey FOREIGN KE
+Y (\"store_id\") REFERE
+NCES public.stores (\"i
+d\")\"\nPL/pgSQL functi
+on inline_code_block li
+ne 1 at SQL statement\n
+"}
+Statement 69 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.stores A
+DD CONSTRAINT products_
+store_id_fkey FOREIGN K
+EY ("store_id")...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"s
+tore_id\" referenced in
+ foreign key constraint
+ does not exist\nCONTEX
+T:  SQL statement \"ALT
+ER TABLE public.stores 
+ADD CONSTRAINT products
+_store_id_fkey FOREIGN 
+KEY (\"store_id\") REFE
+RENCES public.stores (\
+"id\")\"\nPL/pgSQL func
+tion inline_code_block 
+line 1 at SQL statement
+\n"}
+Statement 70 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.stores A
+DD CONSTRAINT profiles_
+store_id_fkey FOREIGN K
+EY ("store_id")...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"s
+tore_id\" referenced in
+ foreign key constraint
+ does not exist\nCONTEX
+T:  SQL statement \"ALT
+ER TABLE public.stores 
+ADD CONSTRAINT profiles
+_store_id_fkey FOREIGN 
+KEY (\"store_id\") REFE
+RENCES public.stores (\
+"id\")\"\nPL/pgSQL func
+tion inline_code_block 
+line 1 at SQL statement
+\n"}
+Statement 79 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.service_
+requests ADD CONSTRAINT
+ usta_reviews_service_r
+equest_id_fkey ...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"s
+ervice_request_id\" ref
+erenced in foreign key 
+constraint does not exi
+st\nCONTEXT:  SQL state
+ment \"ALTER TABLE publ
+ic.service_requests ADD
+ CONSTRAINT usta_review
+s_service_request_id_fk
+ey FOREIGN KEY (\"servi
+ce_request_id\") REFERE
+NCES public.service_req
+uests (\"id\")\"\nPL/pg
+SQL function inline_cod
+e_block line 1 at SQL s
+tatement\n"}
+Statement 82 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.service_
+requests ADD CONSTRAINT
+ service_offers_service
+_request_id_fke...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"s
+ervice_request_id\" ref
+erenced in foreign key 
+constraint does not exi
+st\nCONTEXT:  SQL state
+ment \"ALTER TABLE publ
+ic.service_requests ADD
+ CONSTRAINT service_off
+ers_service_request_id_
+fkey FOREIGN KEY (\"ser
+vice_request_id\") REFE
+RENCES public.service_r
+equests (\"id\")\"\nPL/
+pgSQL function inline_c
+ode_block line 1 at SQL
+ statement\n"}
+Statement 91 failed:
+Query: DO $$ BEGIN ALTE
+R TABLE public.services
+ ADD CONSTRAINT appoint
+ments_service_id_fkey F
+OREIGN KEY ("se...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42703: column \"s
+ervice_id\" referenced 
+in foreign key constrai
+nt does not exist\nCONT
+EXT:  SQL statement \"A
+LTER TABLE public.servi
+ces ADD CONSTRAINT appo
+intments_service_id_fke
+y FOREIGN KEY (\"servic
+e_id\") REFERENCES publ
+ic.services (\"id\")\"\
+nPL/pgSQL function inli
+ne_code_block line 1 at
+ SQL statement\n"}
+Statement 123 failed:
+Query: DO $$ BEGIN CREA
+TE POLICY "Herkes m├╝sa
+itlikleri g├Ârebilir" O
+N public.usta_availabil
+ity FOR SELECT TO...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42601: syntax err
+or at or near \"true\"\
+nLINE 1: DO $$ BEGIN CR
+EATE POLICY \"Herkes m├
+╝saitlikleri g├Ârebilir
+\" ON public.usta_avail
+ability FOR SELECT TO p
+ublic USING true; EXCEP
+TION WHEN duplicate_obj
+ect THEN null; END $$;\
+n                      
+                       
+                       
+                       
+                       
+        ^\n"}
+Statement 131 failed:
+Query: DO $$ BEGIN CREA
+TE POLICY "Technicians 
+and admins can update s
+ervice requests" ON pub
+lic.service_req...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42883: function i
+s_usta() does not exist
+\nHINT:  No function ma
+tches the given name an
+d argument types. You m
+ight need to add explic
+it type casts.\nCONTEXT
+:  SQL statement \"CREA
+TE POLICY \"Technicians
+ and admins can update 
+service requests\" ON p
+ublic.service_requests 
+FOR UPDATE TO authentic
+ated USING (is_usta() O
+R is_admin() OR (auth.u
+id() = customer_id) OR 
+(auth.uid() = usta_id))
+\"\nPL/pgSQL function i
+nline_code_block line 1
+ at SQL statement\n"}
+Statement 132 failed:
+Query: DO $$ BEGIN CREA
+TE POLICY "Technicians 
+and admins can view ser
+vice requests" ON publi
+c.service_reque...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42883: function i
+s_usta() does not exist
+\nHINT:  No function ma
+tches the given name an
+d argument types. You m
+ight need to add explic
+it type casts.\nCONTEXT
+:  SQL statement \"CREA
+TE POLICY \"Technicians
+ and admins can view se
+rvice requests\" ON pub
+lic.service_requests FO
+R SELECT TO authenticat
+ed USING (is_usta() OR 
+is_admin() OR (auth.uid
+() = customer_id) OR (a
+uth.uid() = usta_id))\"
+\nPL/pgSQL function inl
+ine_code_block line 1 a
+t SQL statement\n"}
+Statement 137 failed:
+Query: DO $$ BEGIN CREA
+TE POLICY "Anyone can v
+iew reviews" ON public.
+reviews FOR SELECT TO p
+ublic USING tru...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42601: syntax err
+or at or near \"true\"\
+nLINE 1: DO $$ BEGIN CR
+EATE POLICY \"Anyone ca
+n view reviews\" ON pub
+lic.reviews FOR SELECT 
+TO public USING true; E
+XCEPTION WHEN duplicate
+_object THEN null; END 
+$$;\n                  
+                       
+                       
+                       
+                  ^\n"}
+Statement 151 failed:
+Query: DO $$ BEGIN CREA
+TE POLICY "Everyone can
+ view services" ON publ
+ic.services FOR SELECT 
+TO public USING...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42601: syntax err
+or at or near \"true\"\
+nLINE 1: DO $$ BEGIN CR
+EATE POLICY \"Everyone 
+can view services\" ON 
+public.services FOR SEL
+ECT TO public USING tru
+e; EXCEPTION WHEN dupli
+cate_object THEN null; 
+END $$;\n              
+                       
+                       
+                       
+                       
+   ^\n"}
+Statement 159 failed:
+Query: DO $$ BEGIN CREA
+TE POLICY "Everyone can
+ view service areas" ON
+ public.service_areas F
+OR SELECT TO pu...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42601: syntax err
+or at or near \"true\"\
+nLINE 1: DO $$ BEGIN CR
+EATE POLICY \"Everyone 
+can view service areas\
+" ON public.service_are
+as FOR SELECT TO public
+ USING true; EXCEPTION 
+WHEN duplicate_object T
+HEN null; END $$;\n    
+                       
+                       
+                       
+                       
+                       
+^\n"}
+Statement 163 failed:
+Query: DO $$ BEGIN CREA
+TE POLICY "Everyone can
+ view portfolios" ON pu
+blic.portfolios FOR SEL
+ECT TO public U...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42601: syntax err
+or at or near \"true\"\
+nLINE 1: DO $$ BEGIN CR
+EATE POLICY \"Everyone 
+can view portfolios\" O
+N public.portfolios FOR
+ SELECT TO public USING
+ true; EXCEPTION WHEN d
+uplicate_object THEN nu
+ll; END $$;\n          
+                       
+                       
+                       
+                       
+           ^\n"}
+Statement 169 failed:
+Query: DO $$ BEGIN CREA
+TE POLICY "Herkes urunl
+eri okuyabilir" ON publ
+ic.products FOR SELECT 
+TO public USING...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42601: syntax err
+or at or near \"true\"\
+nLINE 1: DO $$ BEGIN CR
+EATE POLICY \"Herkes ur
+unleri okuyabilir\" ON 
+public.products FOR SEL
+ECT TO public USING tru
+e; EXCEPTION WHEN dupli
+cate_object THEN null; 
+END $$;\n              
+                       
+                       
+                       
+                       
+   ^\n"}
+Statement 170 failed:
+Query: DO $$ BEGIN CREA
+TE POLICY "Public can v
+iew active products" ON
+ public.products FOR SE
+LECT TO public ...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42601: syntax err
+or at or near \"true\"\
+nLINE 1: DO $$ BEGIN CR
+EATE POLICY \"Public ca
+n view active products\
+" ON public.products FO
+R SELECT TO public USIN
+G true; EXCEPTION WHEN 
+duplicate_object THEN n
+ull; END $$;\n         
+                       
+                       
+                       
+                       
+             ^\n"}
+Statement 193 failed:
+Query: DO $$ BEGIN CREA
+TE POLICY "Herkes techn
+ician_stats okuyabilir"
+ ON public.technician_s
+tats FOR SELECT...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42601: syntax err
+or at or near \"true\"\
+nLINE 1: DO $$ BEGIN CR
+EATE POLICY \"Herkes te
+chnician_stats okuyabil
+ir\" ON public.technici
+an_stats FOR SELECT TO 
+public USING true; EXCE
+PTION WHEN duplicate_ob
+ject THEN null; END $$;
+\n                     
+                       
+                       
+                       
+                       
+            ^\n"}
+Statement 195 failed:
+Query: DO $$ BEGIN CREA
+TE POLICY "Herkes hizme
+tleri g├Ârebilir" ON pu
+blic.usta_services FOR 
+SELECT TO public...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42601: syntax err
+or at or near \"true\"\
+nLINE 1: DO $$ BEGIN CR
+EATE POLICY \"Herkes hi
+zmetleri g├Ârebilir\" O
+N public.usta_services 
+FOR SELECT TO public US
+ING true; EXCEPTION WHE
+N duplicate_object THEN
+ null; END $$;\n       
+                       
+                       
+                       
+                       
+                ^\n"}
+Statement 196 failed:
+Query: DO $$ BEGIN CREA
+TE POLICY "Herkes usta_
+services okuyabilir" ON
+ public.usta_services F
+OR SELECT TO pu...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42601: syntax err
+or at or near \"true\"\
+nLINE 1: DO $$ BEGIN CR
+EATE POLICY \"Herkes us
+ta_services okuyabilir\
+" ON public.usta_servic
+es FOR SELECT TO public
+ USING true; EXCEPTION 
+WHEN duplicate_object T
+HEN null; END $$;\n    
+                       
+                       
+                       
+                       
+                       
+^\n"}
+Statement 201 failed:
+Query: DO $$ BEGIN CREA
+TE POLICY "Herkes hizme
+t b├Âlgelerini g├Ârebil
+ir" ON public.usta_serv
+ice_areas FOR SEL...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42601: syntax err
+or at or near \"true\"\
+nLINE 1: DO $$ BEGIN CR
+EATE POLICY \"Herkes hi
+zmet b├Âlgelerini g├Âre
+bilir\" ON public.usta_
+service_areas FOR SELEC
+T TO public USING true;
+ EXCEPTION WHEN duplica
+te_object THEN null; EN
+D $$;\n                
+                       
+                       
+                       
+                       
+                    ^\n
+"}
+Statement 202 failed:
+Query: DO $$ BEGIN CREA
+TE POLICY "Herkes usta_
+service_areas okuyabili
+r" ON public.usta_servi
+ce_areas FOR SE...
+Error: {"message":"Fail
+ed to run sql query: ER
+ROR:  42601: syntax err
+or at or near \"true\"\
+nLINE 1: DO $$ BEGIN CR
+EATE POLICY \"Herkes us
+ta_service_areas okuyab
+ilir\" ON public.usta_s
+ervice_areas FOR SELECT
+ TO public USING true; 
+EXCEPTION WHEN duplicat
+e_object THEN null; END
+ $$;\n                 
+                       
+                       
+                       
+                       
+                    ^\n
+"}
+All statements executed successfully!

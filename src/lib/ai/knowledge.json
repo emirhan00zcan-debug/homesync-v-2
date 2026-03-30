@@ -1,0 +1,26 @@
+{
+    "site_info": {
+        "name": "HomeSync",
+        "mission": "Evinizdeki ışığı yerçekiminden özgür bırakan, premium aydınlatma ve akıllı ev çözümleri sunan gelecek nesil bir platform.",
+        "brand_colors": {
+            "deep_cosmic_blue": "#0A192F",
+            "ivory_white": "Fildişi Beyazı",
+            "radiant_amber": "#FFBF00 (Aydınlatma aksanları)"
+        }
+    },
+    "services": {
+        "professional_installation": "Her ürün kartında bulunan 'Sertifikalı Profesyoneller Tarafından Montaj Dahil' rozeti ile tüm ürünlerimiz uzman montaj hizmeti ile gelir. Ürün + Sevkiyat + Profesyonel Montajcı otomatik olarak senkronize edilir.",
+        "ai_home_stylist": "Yapay Zeka Stilisti, yüklediğiniz oda fotoğraflarına göre size en uygun aydınlatma ürünlerini önerir.",
+        "ai_consultant": "Favorilerinizi analiz ederek ev ortamınıza en uygun ışıklandırma kurulumunu öneren kişisel asistanınız.",
+        "pro_dashboard": "Sertifikalı usta paneli üzerinden uzmanlar iş taleplerini kabul edebilir, kazançlarını ve puanlarını takip edebilirler."
+    },
+    "product_categories": [
+        "Minimalist Avizeler",
+        "Kristal Aydınlatmalar",
+        "Akıllı Lambaderler",
+        "Duvar Aplikleri",
+        "Akıllı Ev Aksesuarları"
+    ],
+    "master_certification": "HomeSync ustaları, elektrik ve akıllı ev sistemleri konusunda kapsamlı bir eğitim ve sertifikasyon sürecinden geçerler. Sadece belirli bir kalite puanının üzerindeki ustalar platformda aktif kalabilir.",
+    "guarantee": "Tüm ürünlerimiz ve montaj hizmetimiz, HomeSync güvencesi altındadır."
+}

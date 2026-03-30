@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@theme {
+    --color-cosmic-blue: #0A192F;
+    --color-cosmic-dark: #020617;
+    --color-ivory-white: #FDFDFD;
+    --color-radiant-amber: #FFBF00;
+    --color-off-white: #F8F9FA;
+    --color-navy-dark: #0B1320;
+    --color-accent-gold: #D4AF37;
+    --shadow-anti-gravity: 0 20px 40px -10px rgba(11, 19, 32, 0.08);
+    
+    --animate-orb: orb-float 20s ease-in-out infinite;
+    --animate-title: title-reveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes orb-float {
+    0%, 100% {
+        transform: translateY(0) scale(1) rotate(0deg);
+        filter: blur(60px);
+    }
+    33% {
+        transform: translateY(-50px) scale(1.1) rotate(5deg);
+        filter: blur(80px);
+    }
+    66% {
+        transform: translateY(20px) scale(0.9) rotate(-5deg);
+        filter: blur(40px);
+    }
+}
+
+@keyframes title-reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0px);
+    }
+}
+
+:root {
+    /* Default to dark mode to avoid flash and koyulaşmış header sorununu önle */
+    --background: var(--color-cosmic-dark);
+    --foreground: var(--color-ivory-white);
+    --glow-color: rgba(255, 191, 0, 0.15);
+    --mesh-1: #0A192F;
+    --mesh-2: #020617;
+    --mesh-3: #0f172a;
+}
+
+[data-theme='dark'] {
+    --background: var(--color-cosmic-dark);
+    --foreground: var(--color-ivory-white);
+    --glow-color: rgba(255, 191, 0, 0.15);
+    --mesh-1: #0A192F;
+    --mesh-2: #020617;
+    --mesh-3: #0f172a;
+}
+
+[data-theme='light'] {
+    --background: var(--color-ivory-white);
+    --foreground: var(--color-cosmic-dark);
+    --glow-color: rgba(255, 191, 0, 0.15);
+    --mesh-1: #e2e8f0;
+    --mesh-2: #f1f5f9;
+    --mesh-3: #ffffff;
+}
+
+@layer base {
+    body {
+        background-color: var(--background);
+        color: var(--foreground);
+        transition: background-color 1s cubic-bezier(0.16, 1, 0.3, 1), color 1s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow-x: hidden;
+        font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    }
+}
+
+@layer utilities {
+    .glass-ultra {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    [data-theme='light'] .glass-ultra {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.4) 100%);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    .glass-pill {
+        background: rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.2);
+    }
+
+    [data-theme='light'] .glass-pill {
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .header-dark-pill {
+        background: rgba(10, 25, 47, 0.96);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.5);
+    }
+
+    .text-glow {
+        text-shadow: 0 0 40px var(--glow-color);
+    }
+
+    .mesh-background {
+        background-color: var(--mesh-2);
+        background-image: 
+            radial-gradient(at 10% 0%, var(--mesh-1) 0px, transparent 50%),
+            radial-gradient(at 100% 0%, var(--mesh-3) 0px, transparent 50%),
+            radial-gradient(at 50% 100%, var(--mesh-1) 0px, transparent 50%);
+        transition: background-color 1.5s ease, background-image 1.5s ease;
+    }
+
+    .orbital-line {
+        position: absolute;
+        border-radius: 9999px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    [data-theme='light'] .orbital-line {
+        border-color: rgba(0, 0, 0, 0.05);
+    }
+
+    /* Fix Chrome Autofill Background Color Injection */
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0px 1000px var(--background) inset !important;
+        -webkit-text-fill-color: var(--foreground) !important;
+        background-color: transparent !important;
+        background-clip: content-box !important;
+    }
+}

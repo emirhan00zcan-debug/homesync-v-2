@@ -1,0 +1,6 @@
+﻿STATUS: 302
+HEADERS: {"content-type":"text/html; charset=utf-8","location":"/Pages/Error/Error.html?aspxerrorpath=/Service/KPSPublic.asmx","access-control-allow-headers":"Origin, X-Requested-With, Content-Type, Accept","access-control-allow-methods":"POST,GET","strict-transport-security":"max-age=26070400; includeSubDomains","x-frame-options":"SAMEORIGIN","x-xss-protection":"1;mode=block","x-content-type-options":"nosniff","content-security-policy":"default-src 'self' 'unsafe-inline'; font-src 'self' data:; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; img-src 'self' 'unsafe-inline' data:;frame-src https://www.google.com/recaptcha/ https://tckimliktest.nvi.gov.tr https://tckimlik.nvi.gov.tr; style-src 'self' 'unsafe-inline'","referer-policy":"no-referer","date":"Mon, 23 Mar 2026 12:47:36 GMT","content-length":"178","set-cookie":["TS01326bb0=0179b2ce45bd065a12a8436438e3ea1712ad60794314d43c08b8fd0c1c8b76029601f6344d1fba9690418e36f6d38c9e2ddc1ff350; Path=/; Domain=.tckimlik.nvi.gov.tr"]}
+BODY: <html><head><title>Object moved</title></head><body>
+<h2>Object moved to <a href="/Pages/Error/Error.html?aspxerrorpath=/Service/KPSPublic.asmx">here</a>.</h2>
+</body></html>
+

@@ -1,0 +1,2 @@
+﻿src/app/dashboard/vendor/settings/page.tsx(32,64): error TS2322: Type '{ id: any; name: any; slug: any; description: any; logo_url: any; is_active: any; is_verified: any; } | null' is not assignable to type 'StoreData'.
+  Property 'banner_url' is missing in type '{ id: any; name: any; slug: any; description: any; logo_url: any; is_active: any; is_verified: any; }' but required in type '{ id: string; name: string; slug: string; description: string | null; logo_url: string | null; banner_url: string | null; is_active: boolean; is_verified: boolean; }'.

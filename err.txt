@@ -1,0 +1,48 @@
+Initialising login role...
+Connecting to remote database...
+The remote database's migration history does not match local files in supabase\migrations directory.
+
+Make sure your local git repo is up-to-date. If the error persists, try repairing the migration history table:
+supabase migration repair --status reverted 20260302120405
+supabase migration repair --status reverted 20260302120414
+supabase migration repair --status reverted 20260302120424
+supabase migration repair --status reverted 20260302120431
+supabase migration repair --status reverted 20260302120527
+supabase migration repair --status reverted 20260302120547
+supabase migration repair --status reverted 20260302122430
+supabase migration repair --status reverted 20260302122906
+supabase migration repair --status reverted 20260302205540
+supabase migration repair --status reverted 20260302211412
+supabase migration repair --status reverted 20260302215530
+supabase migration repair --status reverted 20260303145448
+supabase migration repair --status reverted 20260303183652
+supabase migration repair --status reverted 20260303183710
+supabase migration repair --status reverted 20260304093500
+supabase migration repair --status reverted 20260304150431
+supabase migration repair --status reverted 20260304195346
+supabase migration repair --status reverted 20260304195658
+supabase migration repair --status reverted 20260305103216
+supabase migration repair --status reverted 20260305104815
+supabase migration repair --status reverted 20260305104854
+supabase migration repair --status reverted 20260305105000
+supabase migration repair --status reverted 20260305105355
+supabase migration repair --status reverted 20260305105416
+supabase migration repair --status reverted 20260306084404
+supabase migration repair --status reverted 20260306084426
+supabase migration repair --status reverted 20260306091247
+supabase migration repair --status reverted 20260306125234
+supabase migration repair --status reverted 20260307025736
+supabase migration repair --status reverted 20260307195602
+supabase migration repair --status reverted 20260307195632
+supabase migration repair --status reverted 20260308134315
+supabase migration repair --status reverted 20260308211518
+supabase migration repair --status reverted 20260308211647
+supabase migration repair --status reverted 20260308211743
+supabase migration repair --status reverted 20260308211842
+supabase migration repair --status reverted 20260308212033
+supabase migration repair --status reverted 20260308212111
+supabase migration repair --status reverted 20260308212247
+supabase migration repair --status reverted 20260308212528
+supabase migration repair --status reverted 20260308212716
+supabase migration repair --status reverted 20260308213422
+

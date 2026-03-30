@@ -1,0 +1,2 @@
+﻿src/components/AIStylistModal.tsx(308,70): error TS2551: Property 'image_url' does not exist on type 'Product'. Did you mean 'imageUrl'?
+src/components/AIStylistModal.tsx(309,83): error TS2551: Property 'image_url' does not exist on type 'Product'. Did you mean 'imageUrl'?

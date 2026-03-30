@@ -1,0 +1,60 @@
+﻿[Mernis Request] TC:11111111111, Ad:EM─░RHAN, Soyad:TEST, Yil:1990
+[Mernis RAW SUCCESS]: <div class="master-body">
+    <div class="clearfix"></div>
+    <br />
+    <br />
+    <div class="container page-detail" style="background-color:rgba(234, 247, 250, 0.8);">
+        <table align="left">
+            <tr>
+                <td height="50px">
+                    <img src="../../Content/image/error.png" style="height:50px" />
+                </td>
+                <td>
+                    <strong><span>Sistemde teknik bir hata olu┼ştu veya bu sayfay─▒ g├Ârmek i├ğin yetkiniz yoktur.&nbsp;</span></strong>
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+                    <span>L├╝tfen sistem g├Ârevlileri ile irtibata ge├ğiniz.</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="clearfix"></div>
+    <br />
+    <br />
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+node.exe : [Mernis Response Pa
+rsing Failed]: Could not find 
+TCKimlikNoDogrulaResult in XML
+At line:1 char:1
++ & "C:\Program Files\nodejs/n
+ode.exe" "C:\Program Files\nod
+ejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~
+    + CategoryInfo            
+  : NotSpecified:     ([Mernis
+ Respons...l    aResult in XML
+:Strin    g) [], RemoteExcepti
+    on
+    + FullyQualifiedErro    rI
+d : NativeCommandE    rror
+ 
+RESULT: { success: false, error: 'PARSING_ERROR' }
