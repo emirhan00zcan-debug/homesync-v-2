@@ -75,7 +75,7 @@ export async function POST(req: Request) {
                 return NextResponse.json({
                     success: false,
                     error: 'SERVICE_UNAVAILABLE',
-                    message: message: `Nüfus Müdürlüğü servisine şu an ulaşılamıyor (Sunucu lokasyonu kısıtlaması veya Firewall). Mock mode'u test etmek için NEXT_PUBLIC_MOCK_MERNIS=true ayarlayın.`
+                     message: `Nüfus Müdürlüğü servisine şu an ulaşılamıyor (Sunucu lokasyonu kısıtlaması veya Firewall). Mock mode'u test etmek için NEXT_PUBLIC_MOCK_MERNIS=true ayarlayın.`
                 }, { status: 503 });
             }
 
