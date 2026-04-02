@@ -4,18 +4,14 @@ import { join } from 'path';
 import { existsSync } from 'fs';
 
 export async function GET(
-  request: NextRequest, 
-  { params }: { params: Promise<{ fileName: string }> } // params artık bir Promise
+    request: NextRequest,
+    { params }: { params: Promise<{ fileName: string }> }
 ) {
-  const { fileName } = await params; // await kullanarak içindeki veriyi alıyoruz
-  
-  // Geri kalan işlemler aynı kalabilir...
-  console.log(fileName); 
-  
-  return NextResponse.json({ message: "Dosya adı: " + fileName });
-}
+    try {
+        // 1. Params'ı asenkron olarak al (Next.js 15 kuralı)
+        const { fileName } = await params;
 
-        // Security: Only allow alphanumeric and specific characters in filename
+        // 2. Güvenlik Kontrolü: Sadece izin verilen karakterler
         if (!/^[a-zA-Z0-9_\-\.]+$/.test(fileName)) {
             return NextResponse.json(
                 { error: 'Geçersiz dosya adı' },
@@ -23,11 +19,11 @@ export async function GET(
             );
         }
 
-        // Construct safe file path
+        // 3. Dosya yolunu oluştur
         const uploadsDir = join(process.cwd(), 'uploads', 'technician_docs');
         const filePath = join(uploadsDir, fileName);
 
-        // Prevent directory traversal attacks
+        // 4. Directory Traversal (Dizin Atlatma) saldırısını engelle
         if (!filePath.startsWith(uploadsDir)) {
             return NextResponse.json(
                 { error: 'Yetkisiz erişim' },
@@ -35,7 +31,7 @@ export async function GET(
             );
         }
 
-        // Check if file exists
+        // 5. Dosya var mı kontrol et
         if (!existsSync(filePath)) {
             return NextResponse.json(
                 { error: 'Dosya bulunamadı' },
@@ -43,10 +39,10 @@ export async function GET(
             );
         }
 
-        // Read file
+        // 6. Dosyayı oku
         const fileBuffer = await readFile(filePath);
 
-        // Determine content type based on file extension
+        // 7. İçerik tipini (MIME type) belirle
         const ext = fileName.split('.').pop()?.toLowerCase() || 'bin';
         const contentTypeMap: Record<string, string> = {
             pdf: 'application/pdf',
@@ -58,7 +54,7 @@ export async function GET(
 
         const contentType = contentTypeMap[ext] || 'application/octet-stream';
 
-        // Return file with appropriate headers
+        // 8. Dosyayı uygun headerlar ile döndür
         return new NextResponse(fileBuffer, {
             status: 200,
             headers: {
