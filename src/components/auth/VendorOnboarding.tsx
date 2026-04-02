@@ -152,7 +152,7 @@ export default function VendorOnboarding() {
         setUploading(prev => ({ ...prev, [type]: true }));
         try {
             const formData = new FormData();
-            formData.append('file', file);
+            formData.append('file', file, file.name);
             formData.append('documentType', type.toUpperCase());
 
             const res = await fetch('/api/craftsman/upload-document', {
@@ -423,6 +423,7 @@ export default function VendorOnboarding() {
                                 <input
                                     type="file"
                                     className="absolute inset-0 opacity-0 cursor-pointer"
+                                    accept=".pdf,.jpg,.jpeg,.png"
                                     onChange={(e) => {
                                         const file = e.target.files?.[0];
                                         if (file) handleFileUpload('tax_plate', file);

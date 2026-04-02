@@ -29,7 +29,14 @@ export class StorageService {
             }
 
             // 2. Uzantı kontrolü
-            const ext = path.extname(file.name).toLowerCase();
+            let ext = path.extname(file.name || '').toLowerCase();
+            
+            if (!ext && file.type) {
+                if (file.type === 'application/pdf') ext = '.pdf';
+                else if (file.type === 'image/jpeg') ext = '.jpg';
+                else if (file.type === 'image/png') ext = '.png';
+            }
+
             if (!this.ALLOWED_EXTENSIONS.includes(ext)) {
                 return {
                     success: false,
