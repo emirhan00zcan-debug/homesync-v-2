@@ -4,11 +4,16 @@ import { join } from 'path';
 import { existsSync } from 'fs';
 
 export async function GET(
-    request: NextRequest,
-    { params }: { params: { fileName: string } }
+  request: NextRequest, 
+  { params }: { params: Promise<{ fileName: string }> } // params artık bir Promise
 ) {
-    try {
-        const { fileName } = params;
+  const { fileName } = await params; // await kullanarak içindeki veriyi alıyoruz
+  
+  // Geri kalan işlemler aynı kalabilir...
+  console.log(fileName); 
+  
+  return NextResponse.json({ message: "Dosya adı: " + fileName });
+}
 
         // Security: Only allow alphanumeric and specific characters in filename
         if (!/^[a-zA-Z0-9_\-\.]+$/.test(fileName)) {

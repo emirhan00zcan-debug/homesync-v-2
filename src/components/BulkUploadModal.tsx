@@ -55,10 +55,15 @@ export default function BulkUploadModal({ onClose, onSuccess }: BulkUploadModalP
                 body: JSON.stringify({ rows, dryRun: true }),
             });
             const data = await res.json();
-            if (!res.ok) { setError(data.error || 'Önizleme hatası'); return; }
+            if (!res.ok) { 
+                setError(data.error || 'Önizleme hatası'); 
+                setStep('upload');
+                return; 
+            }
             setPreview(data);
         } catch {
             setError('Sunucuya bağlanılamadı.');
+            setStep('upload');
         }
     };
 
