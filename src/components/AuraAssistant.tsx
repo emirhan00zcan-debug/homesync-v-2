@@ -199,7 +199,7 @@ export default function AuraAssistant() {
             setIsLoading(false);
         }
     };
-if (pathname?.startsWith('/katalog') || pathname?.startsWith('/koleksiyonlar') || pathname?.startsWith('/magazalar')) {
+    if (pathname !== '/') {
         return null;
     }
     return (

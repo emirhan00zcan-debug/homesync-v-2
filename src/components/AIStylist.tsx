@@ -17,7 +17,7 @@ const AIStylist = ({ products = [] }: AIStylistProps) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const pathname = usePathname();
 
-    if (pathname?.startsWith('/katalog') || pathname?.startsWith('/koleksiyonlar') || pathname?.startsWith('/magazalar')) {
+    if (pathname !== '/') {
         return null;
     }
 
